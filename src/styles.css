@@ -97,6 +97,7 @@ code {
   padding: 0 var(--gutter) 30vh;
 }
 .page--wide { max-width: none; padding-top: 72px; }
+.db-container { max-width: 100%; margin: 0 auto; }
 @media (max-width: 720px) { .page--wide { padding-top: 40px; } }
 
 /* ---------- Database header ---------- */
@@ -247,8 +248,6 @@ code {
 .db-table {
   border-collapse: collapse;
   table-layout: fixed;
-  width: max-content;
-  min-width: 100%;
 }
 .db-table th,
 .db-table td {
@@ -264,7 +263,33 @@ code {
 }
 .db-table th:last-child,
 .db-table td:last-child { border-right: 0; }
-.db-table th { padding: 0; font-weight: 400; color: var(--text-secondary); }
+.db-table th { position: relative; padding: 0; font-weight: 400; color: var(--text-secondary); }
+
+.col-resizer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 7px;
+  height: 100%;
+  cursor: col-resize;
+  touch-action: none;
+}
+.col-resizer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.col-resizer:hover::after,
+.col-resizer:active::after { opacity: 0.6; }
+body.is-resizing { cursor: col-resize; user-select: none; }
+body.is-resizing .th-btn { pointer-events: none; }
 
 .th-btn {
   display: flex;
