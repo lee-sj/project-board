@@ -38,8 +38,8 @@ npm run build    # dist/ 에 빌드
 
 ## GitHub Pages 배포
 
-1. GitHub에 저장소를 만들고 `main` 브랜치로 푸시
+1. GitHub에 저장소를 만들고 `master` 브랜치로 푸시
 2. 저장소 **Settings → Pages → Build and deployment → Source** 를 **GitHub Actions** 로 변경
-3. 이후 `main` 에 푸시할 때마다 `.github/workflows/deploy.yml` 이 자동으로 빌드·배포합니다.
+3. 이후 `master` 에 푸시할 때마다 `.github/workflows/deploy.yml` 이 자동으로 빌드·배포합니다.
 
 주소는 `https://<사용자명>.github.io/<저장소명>/` 이며, 상세 페이지는 `#/project/<id>` 형태입니다.
