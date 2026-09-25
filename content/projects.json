@@ -1,0 +1,38 @@
+[
+  {
+    "id": "portfolio-site",
+    "icon": "🎨",
+    "name": "포트폴리오 사이트",
+    "url": "https://example.com/portfolio",
+    "env": ["PC", "Mobile"],
+    "year": 2026,
+    "type": "개인"
+  },
+  {
+    "id": "shopping-mall",
+    "icon": "🛒",
+    "name": "쇼핑몰 리뉴얼",
+    "url": "https://example.com/shop",
+    "env": ["PC"],
+    "year": 2025,
+    "type": "팀"
+  },
+  {
+    "id": "todo-app",
+    "icon": "✅",
+    "name": "투두 앱",
+    "url": "https://example.com/todo",
+    "env": ["Mobile"],
+    "year": 2025,
+    "type": "미니"
+  },
+  {
+    "id": "weather-widget",
+    "icon": "🌤️",
+    "name": "날씨 위젯",
+    "url": "",
+    "env": ["PC", "Mobile"],
+    "year": 2024,
+    "type": "미니"
+  }
+]
